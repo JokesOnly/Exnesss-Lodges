@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorites - Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">💭 QuoteHub</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favorites.html" class="active">My Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>❤️ My Favorite Quotes</h1>
+            <p>Your collection of inspiring quotes saved for later</p>
+        </div>
+
+        <div class="favorites-container">
+            <div id="favoritesContainer"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 QuoteHub - Inspire Yourself Daily</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            displayFavorites();
+            setActiveNav();
+        });
+    </script>
+</body>
+</html>

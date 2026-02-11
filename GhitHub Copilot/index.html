@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">💭 QuoteHub</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="favorites.html">My Favorites</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>💭 Advanced Quote Generator</h1>
+            <p>Get inspired with random quotes, save your favorites, and share them with the world</p>
+        </div>
+
+        <div class="filters">
+            <select id="categoryFilter" onchange="filterByCategory()">
+                <option value="all">All Categories</option>
+                <option value="motivation">Motivation</option>
+                <option value="success">Success</option>
+                <option value="life">Life</option>
+                <option value="courage">Courage</option>
+                <option value="wisdom">Wisdom</option>
+            </select>
+        </div>
+
+        <div class="quote-container">
+            <div class="quote-box" id="quoteBox">
+                <p class="quote-text">"The only way to do great work is to love what you do."</p>
+                <p class="quote-author">- Steve Jobs</p>
+                <p class="quote-category">Motivation</p>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Loading quote...</p>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-primary" onclick="getQuote()">🔄 Get New Quote</button>
+            <button class="btn btn-success" onclick="addToFavorites()">❤️ Add to Favorites</button>
+            <button class="btn btn-info" onclick="shareQuote()">📤 Share</button>
+            <button class="btn btn-secondary" onclick="copyQuote()">📋 Copy</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span>Quotes Viewed:</span>
+                <strong id="viewCount">0</strong>
+            </div>
+            <div class="stat-item">
+                <span>Favorites:</span>
+                <strong id="favCount">0</strong>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 QuoteHub - Inspire Yourself Daily</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
